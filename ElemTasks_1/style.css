@@ -1,0 +1,26 @@
+body {
+  font-size: 10px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-color: rgb(216, 240, 255);
+}
+
+.btn-task {
+  margin: 1em;
+  border-radius: 0;
+}
+
+.btn-task:focus, .myInput:focus {
+  box-shadow: none !important;
+}
+
+.myTitle {
+  padding: 1rem;
+}
+
+.myInput{
+  
+}
