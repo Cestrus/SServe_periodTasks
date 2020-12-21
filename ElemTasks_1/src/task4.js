@@ -6,15 +6,18 @@
 
 
 export const isPalindrom = (number) => {
-  if(isNaN(number)) return `status: 'failed', reason: invlid data`;
-  let num = number.toString();
+  let num = Number(number[0]);
+
+  if(isNaN(num)) return `status: 'failed', reason: invlid data`;
+
+  let numStr = num.toString();
   let polindrom = 0;
 
-  for (let i = 0; i < num.length - 2; i++){
-    let index = num.indexOf(num[i], i + 2)
+  for (let i = 0; i < numStr.length - 2; i++){
+    let index = numStr.indexOf(numStr[i], i + 2)
     if(index > 0){
-      let substr = [...num].splice(i, index + 1 - i);
-      if (+substr.join('') === +substr.reverse().join('')){
+      let substr = [...numStr].splice(i, index + 1 - i);
+      if ( +substr.join('') === +substr.reverse().join('')){
         polindrom = substr.join(''); 
         break;  
       }    

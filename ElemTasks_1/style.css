@@ -21,6 +21,17 @@ body {
   padding: 1rem;
 }
 
+.input-box{
+  margin-top: 10rem; 
+}
 .myInput{
-  
+  margin: 5px;
+}
+
+.myInput:focus {
+  outline: none;
+}
+
+.btn-task1, .btn-task4, .btn-task6 {
+  border: 3px solid black;
 }

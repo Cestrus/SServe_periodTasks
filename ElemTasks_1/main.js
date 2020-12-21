@@ -14,9 +14,7 @@ function handleClick (ev) {
   switch(true){
     case (btn.classList.contains('btn-task1')):{
       console.log('=== task 1 ===');
-      console.log(renderChessDesk (8, 6, '#'));
-      console.log(renderChessDesk (3, 4, 7));
-      console.log(renderChessDesk (3, 4, {}));
+      console.log( renderChessDesk (getData()));
       break;
     }
     case (btn.classList.contains('btn-task2')):{
@@ -34,7 +32,7 @@ function handleClick (ev) {
     }
     case (btn.classList.contains('btn-task4')):{
       console.log('=== task 4 ===');
-      console.log(isPalindrom(123432));
+      console.log( isPalindrom(getData()));
       break;
     }
     case (btn.classList.contains('btn-task5')):{
@@ -44,7 +42,7 @@ function handleClick (ev) {
     }
     case (btn.classList.contains('btn-task6')):{
       console.log('=== task 6 ===');
-      console.log(getString(10, 200));
+      console.log( getString(getData()));
       break;
     }
     case (btn.classList.contains('btn-task7')):{
@@ -58,4 +56,9 @@ function handleClick (ev) {
 
 }
 
-
+function getData(){
+  const data_1 = document.querySelector('.myInput-1').value;
+  const data_2 = document.querySelector('.myInput-2').value;
+  const data_3 = document.querySelector('.myInput-3').value;
+  return [data_1, data_2, data_3];
+}

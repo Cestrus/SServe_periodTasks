@@ -3,8 +3,12 @@
 // Входные параметры: длина и значение минимального квадрата
 // Выход: строка с рядом чисел
 
-export const getString = (length, number) => {
+export const getString = (data) => {
+  const length = Number(data[0]);
+  const number = Number(data[1]);
+  
   if(isNaN(length) || isNaN(number)) return `status: 'failed', reason: invlid data`;
+  
   let str = [];
   let i = 1;
 
